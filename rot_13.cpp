@@ -47,4 +47,6 @@ int main()
     assert(rot13(str) == (rot));
 
     std::cout << "all tests passed!" << std::endl;
+
+    return 0;
 }

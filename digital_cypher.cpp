@@ -78,4 +78,6 @@ int main()
     assert(Kata::Decode(std::vector<int>({14, 10, 22, 29, 6, 27, 19, 18, 6, 12, 8}), 1939) == ("masterpiece"));
 
     std::cout << "all tests passed!" << std::endl;
+
+    return 0;
 }

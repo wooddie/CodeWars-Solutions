@@ -27,4 +27,6 @@ int main()
     assert(encrypt("a", 1) == ("b"));
     assert(encrypt("please encrypt me", 2) == ("rngcug\"gpet{rv\"og"));
     std::cout << "all tests passed!" << std::endl;
+
+    return 0;
 }

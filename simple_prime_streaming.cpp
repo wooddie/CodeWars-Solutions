@@ -48,4 +48,6 @@ int main()
     doTest(20000, 5, "09334");
 
     std::cout << "all tests passed!" << std::endl;
+
+    return 0;
 }

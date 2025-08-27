@@ -4,20 +4,20 @@
 #include <iostream>
 
 std::unordered_map<char, char> gaderypoluki = {
-    {'A', 'G'}, {'G', 'A'},
-    {'D', 'E'}, {'E', 'D'},
-    {'Y', 'R'}, {'R', 'Y'},
-    {'O', 'P'}, {'P', 'O'},
-    {'L', 'U'}, {'U', 'L'},
-    {'I', 'K'}, {'K', 'I'},
+    {'A', 'G'}, {'G', 'A'}, {'D', 'E'}, {'E', 'D'}, {'Y', 'R'}, {'R', 'Y'}, {'O', 'P'}, {'P', 'O'}, {'L', 'U'}, {'U', 'L'}, {'I', 'K'}, {'K', 'I'},
 
-    {'a', 'g'}, {'g', 'a'},
-    {'d', 'e'}, {'e', 'd'},
-    {'y', 'r'}, {'r', 'y'},
-    {'o', 'p'}, {'p', 'o'},
-    {'l', 'u'}, {'u', 'l'},
-    {'i', 'k'}, {'k', 'i'}
-};
+    {'a', 'g'},
+    {'g', 'a'},
+    {'d', 'e'},
+    {'e', 'd'},
+    {'y', 'r'},
+    {'r', 'y'},
+    {'o', 'p'},
+    {'p', 'o'},
+    {'l', 'u'},
+    {'u', 'l'},
+    {'i', 'k'},
+    {'k', 'i'}};
 
 std::string encode(const std::string &str)
 {
@@ -65,4 +65,5 @@ int main()
     assert(decode("agedyropulik") == ("gaderypoluki"));
     std::cout << "all tests passed!" << std::endl;
 
+    return 0;
 }

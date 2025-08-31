@@ -48,6 +48,8 @@
         "variant": "cpp",
         "algorithm": "cpp",
         "cassert": "cpp",
-        "cstddef": "cpp"
+        "cstddef": "cpp",
+        "__tree": "cpp",
+        "map": "cpp"
     }
 }

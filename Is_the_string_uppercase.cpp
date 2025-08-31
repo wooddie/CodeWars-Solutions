@@ -33,5 +33,7 @@ int main()
     assert(is_uppercase("ACSKLDFJSgSKLDFJSKLDFJ") == (false));
     assert(is_uppercase("ACSKLDFJSGSKLDFJSKLDFJ") == (true));
 
+    std::cout << "all tests passed!" << std::endl;
+
     return 0;
 }

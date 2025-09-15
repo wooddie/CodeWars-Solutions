@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/kanapiya/Documents/new_SP_xcode/CodeWars-Solutions/numbers_that_are_a_power_of_their_sum_of_digits'
+relocations:     []
+...

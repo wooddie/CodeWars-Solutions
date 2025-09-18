@@ -53,6 +53,7 @@
         "map": "cpp",
         "charconv": "cpp",
         "forward_list": "cpp",
-        "strstream": "cpp"
+        "strstream": "cpp",
+        "set": "cpp"
     }
 }

@@ -4,8 +4,19 @@
 
 std::string autoMorphic(int number)
 {
-	// Your Code here .. Enjoy !!
-	return "Your Result Here";
+	long long num_square = static_cast<long long>(number) * number;
+	std::string str_number = std::to_string(number);
+	std::string str_square = std::to_string(num_square);
+
+	if (str_square.length() >= str_number.length())
+	{
+		std::string suffix = str_square.substr(str_square.length() - str_number.length());
+		if (suffix == str_number)
+		{
+			return "Automorphic";
+		}
+	}
+	return "Not!!";
 }
 
 int main()

@@ -4,7 +4,18 @@
 
 bool betterThanAverage(std::vector<int> classPoints, int yourPoints)
 {
-    // your code here
+    int sum = 0;
+
+    for (int n : classPoints)
+    {
+        sum += n;
+    }
+
+    double average = sum / static_cast<int>(classPoints.size());
+
+    if (yourPoints > average) return true;
+
+    return false;
 }
 
 int main()

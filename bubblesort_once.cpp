@@ -1,24 +1,31 @@
 #include <iostream>
 #include <cassert>
 #include <vector>
+#include <algorithm>
 
 std::vector<int> bubbleSortOnce(const std::vector<int> &input)
 {
     std::vector<int> nums = input;
 
-    while (nums.length()--)
-    {
-        bool swapped = false;
+    //while (true)
+    //{
+        //bool swapped = false;
 
-        for (int i = 0; i < nums.length(); ++i)
+        for (unsigned long i = 0; i < nums.size() - 1; ++i)
         {
             if (nums[i] > nums[i + 1])
             {
-                swap(nums[i], nums[i + 1]);
-                swapped = true;
+                //std::swap(nums[i], nums[i + 1]);
+                int temp = nums[i];
+                nums[i] = nums[i + 1];
+                nums[i + 1] = temp;
+                // swapped = true;
+                // break;
             }
         }
-    }
+
+        //if (!swapped) break;
+    //}
 
     return nums;
 }
@@ -28,7 +35,12 @@ int main()
     //* Example test case from description
     std::vector<int> expected = {7, 5, 3, 1, 2, 4, 6, 8, 9};
     std::vector<int> actual = bubbleSortOnce({9, 7, 5, 3, 1, 2, 4, 6, 8});
-    Assert::That(actual, Is().EqualToContainer(expected));
+    for (int n : bubbleSortOnce({9, 7, 5, 3, 1, 2, 4, 6, 8}))
+    {
+        std::cout << n << ", ";
+    }
+    std::cout << std::endl;
+    assert(actual == (expected));
 
     std::cout << "all tests passed!" << std::endl;
 

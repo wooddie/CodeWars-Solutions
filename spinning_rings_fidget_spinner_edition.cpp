@@ -4,8 +4,6 @@
 #include <numeric>
 typedef unsigned long long ull;
 
-typedef unsigned long long ull;
-
 ull spinningRings(ull innerMax, ull outerMax)
 {
     ull count = 0;

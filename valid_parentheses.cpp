@@ -49,9 +49,9 @@ int main()
 
     std::cout << std::boolalpha << s1.isValid("()") << std::endl;     //* true
     std::cout << std::boolalpha << s1.isValid("()[]{}") << std::endl; //* true
-    // std::cout << std::boolalpha << s1.isValid("(]") << std::endl;   //* false
-    // std::cout << std::boolalpha << s1.isValid("([])") << std::endl; //* false
-    // std::cout << std::boolalpha << s1.isValid("([)]") << std::endl; //* false
+    std::cout << std::boolalpha << s1.isValid("(]") << std::endl;   //* false
+    std::cout << std::boolalpha << s1.isValid("([])") << std::endl; //* true
+    std::cout << std::boolalpha << s1.isValid("([)]") << std::endl; //* false
 
     return 0;
 }

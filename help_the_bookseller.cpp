@@ -2,6 +2,7 @@
 #include <iostream>
 #include <cassert>
 #include <map>
+#include <sstream>
 
 class StockList
 {
@@ -12,8 +13,46 @@ public:
 std::string StockList::stockSummary(std::vector<std::string> &lstOfArt, std::vector<std::string> &categories)
 {
     std::unordered_map<char, int> list;
+    bool hasData = false;
 
-    
+    for (const std::string &s : lstOfArt)
+    {
+        if (s.empty())
+            continue;
+
+        auto pos = s.find(' ');
+        if (pos == std::string::npos)
+            continue;
+
+        std::string article = s.substr(0, pos);
+        int num = std::stoi(s.substr(pos + 1));
+
+        char category = article[0];
+        list[category] += num;
+        hasData = true;
+    }
+
+    std::stringstream ss;
+
+    for (size_t i = 0; i < categories.size(); ++i)
+    {
+        if (categories[i].empty())
+            continue;
+
+        char cat = categories[i][0];
+        int total = list.count(cat) ? list[cat] : 0;
+
+        ss << "(" << cat << " : " << total << ")";
+        if (i != categories.size() - 1)
+            ss << " - ";
+    }
+
+    if(!hasData)
+    {
+        return "";
+    }
+
+    return ss.str();
 }
 
 void testequal(std::string ans, std::string sol)

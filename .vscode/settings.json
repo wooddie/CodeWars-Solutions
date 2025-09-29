@@ -54,6 +54,7 @@
         "charconv": "cpp",
         "forward_list": "cpp",
         "strstream": "cpp",
-        "set": "cpp"
+        "set": "cpp",
+        "unordered_set": "cpp"
     }
 }

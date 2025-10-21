@@ -11,7 +11,6 @@ public:
         {
             switch (c)
             {
-
             case '(':
                 stack.push(')');
                 break;

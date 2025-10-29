@@ -30,4 +30,6 @@ int main()
     assert(findLongest({7000000, 10, 100}) == 7000000);
 
     std::cout << "all tests passed!" << std::endl;
+
+    return 0;
 }

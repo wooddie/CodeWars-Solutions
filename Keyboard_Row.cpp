@@ -2,7 +2,7 @@
 #include <vector>
 #include <string>
 #include <unordered_map>
-// 520. Detect Capital
+
 class Solution
 {
 public:

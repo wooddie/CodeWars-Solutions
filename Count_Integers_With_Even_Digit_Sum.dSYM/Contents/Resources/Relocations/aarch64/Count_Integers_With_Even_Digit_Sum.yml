@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/kanapiya/Documents/new_SP_xcode/CodeWars-Solutions/Count_Integers_With_Even_Digit_Sum'
+relocations:     []
+...

@@ -56,5 +56,6 @@
         "strstream": "cpp",
         "set": "cpp",
         "unordered_set": "cpp"
-    }
+    },
+    "vscode-pets.theme": "forest"
 }

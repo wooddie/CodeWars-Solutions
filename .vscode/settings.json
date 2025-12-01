@@ -57,5 +57,6 @@
         "set": "cpp",
         "unordered_set": "cpp"
     },
-    "vscode-pets.theme": "forest"
+    "vscode-pets.theme": "forest",
+    "editor.cursorStyle": "line"
 }

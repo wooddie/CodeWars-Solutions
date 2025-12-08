@@ -33,4 +33,6 @@ int main()
     assert(sp_eng("") == false);
 
     std::cout << "all tests passed!" << std::endl;
+
+    return 0;
 }

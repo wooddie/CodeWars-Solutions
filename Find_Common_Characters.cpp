@@ -8,39 +8,32 @@ public:
     std::vector<std::string> commonChars(std::vector<std::string> &words)
     {
         std::vector<std::string> res;
-        char used[256] = {0};
 
-        for (const char &c : words[0])
+        int freq[26] = {0};
+        for (char c : words[0])
+            freq[c - 'a']++;
+
+        for (int i = 0; i < 26; ++i)
         {
-            int min_count = INT_MAX;
+            if (freq[i] == 0)
+                continue;
 
-            for (int i = 1; i < words.size(); ++i)
+            char c = 'a' + i;
+
+            int min_count = freq[i];
+            for (int j = 1; j < words.size(); ++j)
             {
                 int count_in_word = 0;
-
-                for (char ch : words[i])
+                for (char ch : words[j])
                 {
                     if (ch == c)
                         count_in_word++;
                 }
-
                 min_count = std::min(min_count, count_in_word);
             }
 
-            if (min_count == 0)
-            {
-                continue;
-            }
-
-            int needed = min_count - used[c];
-
-            if (needed > 0)
-            {
-                for (int k = 0; k < needed; ++k)
-                    res.push_back(std::string(1, c));
-
-                used[c] += needed;
-            }
+            for (int k = 0; k < min_count; ++k)
+                res.push_back(std::string(1, c));
         }
 
         return res;

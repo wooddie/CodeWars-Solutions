@@ -53,4 +53,6 @@ int main()
 
     v = {"hello", "world", "leetcode"};
     std::cout << s1.countCharacters(v, "welldonehoneyr") << std::endl;
+
+    return 0;
 }
